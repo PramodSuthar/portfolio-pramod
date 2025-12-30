@@ -2,7 +2,13 @@
 
 import { useState, useEffect, forwardRef } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Github, Linkedin, type LucideIcon } from "lucide-react";
+import {
+  ArrowUpRight,
+  Github,
+  Linkedin,
+  type LucideIcon,
+  type LucideProps,
+} from "lucide-react";
 import { AnimatedText } from "@/components/hero/animated-text";
 import { contact } from "@/data/content";
 
