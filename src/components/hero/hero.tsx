@@ -142,12 +142,6 @@ function HeroCTA({ loaderDone }: { loaderDone: boolean }) {
           <Mail className="h-4 w-4" />
           Contact Me
         </Link>
-        <Link
-          href="#experience"
-          className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-border bg-card px-10 py-4 text-sm font-semibold uppercase tracking-[0.3em] text-text-secondary shadow-[0_8px_24px_-18px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:bg-surface-warm-hover sm:w-auto"
-        >
-          Explore Work
-        </Link>
       </motion.div>
     </div>
   );
