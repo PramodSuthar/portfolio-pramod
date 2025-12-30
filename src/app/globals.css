@@ -1,0 +1,319 @@
+@import "tailwindcss";
+
+/* Almarena Font - Used for loading screen (matching Adrien Laurent's portfolio) */
+@font-face {
+  font-family: "Almarena";
+  src: url("/fonts/Almarena-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Almarena";
+  src: url("/fonts/Almarena-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Loading Screen Styles */
+.loading-screen {
+  font-family: "Almarena", -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+.loading-text {
+  color: var(--loader-text);
+  line-height: 1;
+}
+
+.loader-row {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1.4vw;
+}
+
+.loader-main-text {
+  font-family: "Almarena", sans-serif !important;
+  font-weight: 300;
+  font-size: 3.8095238095vw;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--loader-text);
+}
+
+.loader-counter {
+  font-family: "Almarena", sans-serif !important;
+  font-weight: 300;
+  font-size: 1.4285714286vw;
+  line-height: 1;
+  min-width: 3ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--loader-text);
+}
+
+.loader-main-text-mobile {
+  font-family: "Almarena", sans-serif !important;
+  font-weight: 300;
+  font-size: clamp(20px, 6vw, 36px);
+  line-height: 1;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: var(--loader-text);
+}
+
+.loader-counter-mobile {
+  font-family: "Almarena", sans-serif !important;
+  font-weight: 300;
+  font-size: clamp(14px, 5vw, 24px);
+  line-height: 1;
+  min-width: 3ch;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  color: var(--loader-text);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Base colors */
+  --background: #f7f7f5;
+  --foreground: #050505;
+  --card: #ffffff;
+  --card-foreground: #050505;
+  --popover: #ffffff;
+  --popover-foreground: #050505;
+  --primary: #050505;
+  --primary-foreground: #f7f7f5;
+  --secondary: #f0f0ef;
+  --secondary-foreground: #050505;
+  --muted: #ebebea;
+  --muted-foreground: #555555;
+  --accent: #f0f0ef;
+  --accent-foreground: #050505;
+  --destructive: #ca3a31;
+  --border: #e1e1df;
+  --input: #d8d8d6;
+  --ring: #050505;
+  --gray-light: #bebebe;
+
+  /* Extended palette */
+  --surface-warm: #fdfbf6;
+  --surface-warm-hover: #f7f6f2;
+  --text-secondary: #8f8f8f;
+  --text-muted: #bfbfbf;
+  --text-emphasis: #3b3b3b;
+  --button-dark: #3a3a3a;
+  --button-dark-hover: #2b2b2b;
+  --border-warm: #e5e5e1;
+
+  /* Loader colors */
+  --loader-bg: #171717;
+  --loader-text: #dfd3c3;
+
+  /* Neutral shades for light mode (matching Tailwind neutral) */
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  --neutral-950: #0a0a0a;
+
+  /* Z-index scale */
+  --z-background: 0;
+  --z-content: 10;
+  --z-decoration: 20;
+  --z-widget: 30;
+  --z-sticky: 40;
+  --z-modal: 50;
+  --z-overlay: 9999;
+}
+
+.dark {
+  /* Base colors */
+  --background: #050505;
+  --foreground: #f7f7f5;
+  --card: #0a0a0a;
+  --card-foreground: #f7f7f5;
+  --popover: #0a0a0a;
+  --popover-foreground: #f7f7f5;
+  --primary: #f7f7f5;
+  --primary-foreground: #050505;
+  --secondary: #111111;
+  --secondary-foreground: #f7f7f5;
+  --muted: #151515;
+  --muted-foreground: #999999;
+  --accent: #1b1b1b;
+  --accent-foreground: #f7f7f5;
+  --destructive: #f97066;
+  --border: #262626;
+  --input: #1a1a1a;
+  --ring: #f7f7f5;
+  --gray-light: #4a4a4a;
+
+  /* Extended palette - Dark mode equivalents */
+  --surface-warm: #0a0a0a;
+  --surface-warm-hover: #111111;
+  --text-secondary: #a0a0a0;
+  --text-muted: #666666;
+  --text-emphasis: #e0e0e0;
+  --button-dark: #f0f0f0;
+  --button-dark-hover: #ffffff;
+  --border-warm: #1f1f1f;
+
+  /* Neutral shades for dark mode */
+  --neutral-50: #171717;
+  --neutral-100: #1a1a1a;
+  --neutral-200: #262626;
+  --neutral-300: #404040;
+  --neutral-400: #525252;
+  --neutral-500: #737373;
+  --neutral-600: #a3a3a3;
+  --neutral-700: #d4d4d4;
+  --neutral-800: #e5e5e5;
+  --neutral-900: #f5f5f5;
+  --neutral-950: #fafafa;
+}
+
+@theme inline {
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-surface-warm: var(--surface-warm);
+  --color-surface-warm-hover: var(--surface-warm-hover);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-emphasis: var(--text-emphasis);
+  --color-button-dark: var(--button-dark);
+  --color-button-dark-hover: var(--button-dark-hover);
+  --color-border-warm: var(--border-warm);
+  --color-loader-bg: var(--loader-bg);
+  --color-loader-text: var(--loader-text);
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Spacing & Sizing */
+  --radius-3xl: 1.5rem;
+
+  /* Z-Index Scale */
+  --z-index-background: var(--z-background);
+  --z-index-content: var(--z-content);
+  --z-index-decoration: var(--z-decoration);
+  --z-index-widget: var(--z-widget);
+  --z-index-sticky: var(--z-sticky);
+  --z-index-modal: var(--z-modal);
+  --z-index-overlay: var(--z-overlay);
+}
+
+/* Lottie decoration filter */
+.lottie-decoration {
+  filter: grayscale(1) brightness(0.5) contrast(1.2);
+  mix-blend-mode: multiply;
+  opacity: 0.25;
+}
+
+.dark .lottie-decoration {
+  filter: grayscale(1) brightness(1.5) contrast(0.8);
+  mix-blend-mode: screen;
+  opacity: 0.15;
+}
+
+/* Theme transition performance */
+html {
+  transition: background-color 0s;
+}
+
+/* GPU acceleration for theme overlay */
+[data-theme-overlay] {
+  will-change: clip-path, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+html,
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  min-height: 100%;
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  body,
+  a,
+  button {
+    cursor: none;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+* {
+  border-color: var(--border);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+::selection {
+  background-color: oklch(20.5% 0 0);
+  color: oklch(98.5% 0 0);
+}
+
+.dark ::selection {
+  background-color: oklch(90% 0 0);
+  color: oklch(10% 0 0);
+}

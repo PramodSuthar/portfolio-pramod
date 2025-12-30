@@ -1,0 +1,9 @@
+# Audio Files
+
+Add your audio files here. The music player expects:
+
+- `icon.mp3` - The track displayed in the music widget
+
+To change the track, edit `HERO_TRACK` in:
+`src/components/hero/music-card.tsx`
+
