@@ -18,9 +18,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pramod Suthar - Full-stack & AI Engineer",
+  title: "Pramod Suthar - Full-stack Software Developer",
   description:
-    "Personal portfolio built in Next.js with Tailwind and Framer Motion.",
+    "Greetings! 👋 I'm a seasoned full-stack developer, specializing in crafting cutting-edge websites and applications. Beyond coding, I'm a huge FIFA nerd, and immerse myself in cinematic experiences 🎦, and delve into impactful non-fiction/self-improvement books 📚. If you share a passion for code, football, or just chilling like me, Let's connect!",
+  openGraph: {
+    title: "Pramod Suthar - Full-stack Software Developer",
+    description:
+      "Greetings! 👋 I'm a seasoned full-stack developer, specializing in crafting cutting-edge websites and applications. Beyond coding, I'm a huge FIFA nerd, and immerse myself in cinematic experiences 🎦, and delve into impactful non-fiction/self-improvement books 📚. If you share a passion for code, football, or just chilling like me, Let's connect!",
+    url: "https://pramodsuthar.com",
+    siteName: "Pramod Suthar Portfolio",
+    type: "website",
+    images: [
+      {
+        url: "/image/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Pramod Suthar - Full-stack Software Developer",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
