@@ -68,7 +68,6 @@ export const Experience = [
     description:
       "Delivered full-stack solutions for small businesses and startups, including e-commerce platforms, inventory management systems, and custom CRM tools. Gained hands-on experience with agile methodologies and client communication.",
     tags: ["C#", "Python", "Web Development", "SQL", "Git", "GitHub"],
-    link: "https://www.onewebtechnologies.com/",
   },
 ];
 
