@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pramod — Full-stack & AI Engineer",
+  title: "Pramod Suthar - Full-stack & AI Engineer",
   description:
-    "Personal portfolio experience built in Next.js with Tailwind and Framer Motion.",
+    "Personal portfolio built in Next.js with Tailwind and Framer Motion.",
 };
 
 export default function RootLayout({

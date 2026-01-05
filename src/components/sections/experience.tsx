@@ -68,15 +68,17 @@ function ExperienceRow({ experience, index }: { experience: ExperienceItem; inde
               </h3>
               <p className="text-sm text-text-secondary">{experience.role}</p>
             </div>
-            <Link
-              href={experience.link}
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-border transition-all hover:-rotate-6 hover:bg-foreground hover:text-background"
-              aria-label={`Open ${experience.company}`}
-            >
-              <ArrowUpRight className="h-5 w-5" />
-            </Link>
+            {experience.link && (
+              <Link
+                href={experience.link}
+                target="_blank"
+                rel="noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-border transition-all hover:-rotate-6 hover:bg-foreground hover:text-background"
+                aria-label={`Open ${experience.company}`}
+              >
+                <ArrowUpRight className="h-5 w-5" />
+              </Link>
+            )}
           </div>
         </div>
 
