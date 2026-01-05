@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "public/image/og-image.png",
+        url: "images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Pramod Suthar - Full-stack Software Developer",
