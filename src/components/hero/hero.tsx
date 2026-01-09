@@ -40,7 +40,7 @@ export function Hero() {
             animate={loaderDone ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ delay: loaderDone ? 0.6 + 0.2 : 0, duration: 0.8 }}
           >
-            Montréal ✦ Remote ✦ 2025
+            Montréal ✦ Remote ✦ {new Date().getFullYear()}
           </motion.span>
         </div>
         <div className="flex flex-col gap-8 md:gap-24 lg:gap-32">
